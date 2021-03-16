@@ -14,7 +14,8 @@ class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
-    @AfterEach
+    //각 테스트 메서드 실행시 메서드 종료시점에서 현재 메서드를 실행시켜주는 어노테이션
+   @AfterEach
     public void afterEach() {
         repository.clearStore();
     }
