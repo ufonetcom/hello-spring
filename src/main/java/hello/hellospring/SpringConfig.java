@@ -1,5 +1,6 @@
 package hello.hellospring;
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.*;
 import hello.hellospring.service.MemberService;
@@ -24,6 +25,12 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
+
+    //aop di
+    /*@Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
+    }*/
 
     //기본 jpa방식
     /*private EntityManager em;
